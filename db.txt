@@ -1,0 +1,39 @@
+CREATE DATABASE foodtails
+
+CREATE TABLE users(
+username varchar(50) NOT NULL UNIQUE,
+password varchar(50) NOT NULL,
+surname varchar(50) NOT NULL, 
+name varchar(50) NOT NULL, 
+email varchar(50) NOT NULL UNIQUE, 
+type varchar(50) NOT NULL, 
+PRIMARY KEY(username));
+
+INSERT INTO users VALUES ('lefterismarin','123456','marinakis','lefteris','lefterismarin92@gmail.com','Admin');
+
+
+
+CREATE TABLE restaurants(
+name varchar(50) NOT NULL UNIQUE,
+address varchar(50) NOT NULL,
+username varchar(50) NOT NULL,
+email varchar(50) NOT NULL,
+type_food varchar(50) NOT NULL,
+information varchar(2000) NOT NULL,
+num_votes numeric(4,0) NOT NULL,
+stars numeric(1,0) NOT NULL,
+weight numeric(4,2) NOT NULL,
+PRIMARY KEY(name));
+
+
+
+
+CREATE TABLE critics(
+username varchar(50) NOT NULL,
+name varchar(50) NOT NULL,
+stars numeric(1,0) NOT NULL,
+critic varchar(2000),
+PRIMARY KEY(username, name));
+
+
+

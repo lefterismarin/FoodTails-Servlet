@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Foodtails</title>
+<style>
+html, body{height: 100%;}
+body{
+		background-image: url("food_background.jpg");		
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+		
+		
+	}
+h1,h2{
+		text-align: center;
+		color: white;
+  }
+
+.container{
+			margin: auto;
+  			text-align: center;
+  			
+  			}
+ 			
+.container label{
+				color: white;
+				font-weight:bold;
+}
+
+form{
+	display: inline;
+	}
+input[type=submit]{
+	background-color: #4FAADF;
+	padding:15px 32px;
+	text-align:center;
+	display: inline-block;
+	font-size: 14px;
+	margin:4px 2px;
+	font-weight:bold;
+	}
+	input[type=submit]:hover{
+			border:2px solid red;
+			cursor: pointer;
+			}
+	
+
+</style>
+</head>
+<body>
+<h1>Welcome to Restaurant Evaluation Website</h1><br>
+
+
+
+<br><br><br><br><br>
+
+<h2>Sign in/Sign up User</h2>
+
+<div class="container">
+<form action="Login_servlet">
+<label>Username </label><input type="text" name="user_login"/>
+<label>Password </label><input type="password" name="pass_login"/><br><br><br>
+<input type="submit" value="Log In"/>
+
+</form>
+<form action="Forgot_password.html">
+<input type="submit" name="recover" value="Recover Password"/>
+</form>
+<br><br><br><br><br><br>
+
+<form action="Register.html">
+<input type="submit" name="register" value="Register">
+</form>
+
+
+
+<form action="Login_servlet">
+<input type="submit" name="guest" value="Continue as Guest">
+</form>
+</div>
+</body>
+</html>
