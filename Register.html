@@ -5,27 +5,71 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Insert title here</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Register</title>
+    <style type="text/css" media="screen">
+
+        .register-form{
+            padding-bottom: 0px !important;
+            background: #a7b81717;
+        }
+        
+        .my-label{
+            float: left;
+        }
+
+    </style>
 </head>
 <body>
-<form action="Login_servlet">
-<label>Username </label><input type="text" name="user_register" required/><br>
-<label>Surname </label><input type="text" name="surname" required/><br>
-<label>Name </label><input type="text" name="name" required/><br>
-<label>Password </label><input type="password" name="pass_register" required/><br>
-<label>Email </label><input type="email" name="email" required/><br>
-<select name="type_register">
-<option value="User">User</option>
-<option value="Restaurant Owner">Restaurant Owner</option>
-</select>
-<input type="submit" value="Register" name="register"/>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+<form action="Login_servlet" class="register-form text-center border border-light p-5">
+    <h2 class="h2 mb-4">Register</h2>
+    <div class="form-group">
+    <label class="my-label" for="user_register">Username </label>
+    <input type="text" class="form-control" name="user_register" id="user_register"required/><br>
+    </div>
+    <div class="form-group">
+        <label class="my-label">Surname </label>
+        <input type="text" class="form-control" name="surname" required/><br>
+    </div>
+    <div class="form-group">
+    <label class="my-label">Name </label>
+        <input type="text" class="form-control" name="name" required/><br>
+    </div>
+    <div class="form-group">
+        <label class="my-label">Password </label>
+        <input type="password" class="form-control"  name="pass_register" required/><br>
+    </div>
+
+    <div class="form-group">
+
+    <label class="my-label">Email </label>
+        <input type="email"  class="form-control" name="email" required/><br>
+    </div>
+    <div class="form-group">
+        <label class="my-label">Select Type: </label>
+
+    <select name="type_register">
+
+        <option value="User">User</option>
+        <option value="Restaurant Owner">Restaurant Owner</option>
+    </select>
+    </div>
+<input type="submit" style="margin-top: 25px;width: 50%;" class="btn btn-warning" value="Register" name="register"/>
 <br><br>
 <br>
 
 
 </form>
 <form action="Login.html">
-<input type="submit" value="Go Back"/>
+<input type="submit" style="margin: 25px;" class="btn btn-secondary" value=" &#8592; Go Back"/>
 </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
